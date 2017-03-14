@@ -129,12 +129,6 @@ CREATE TABLE clinical_study_noclob (
 ) ON PRIMARY TEXTIMAGE_ON PRIMARY
 GO
 
-CREATE TABLE condition_browse (
-   MESH_CONDITION_ID int not NULL,
-   NCT_ID nvarchar(50) NULL,
-   MESH_TERM nvarchar(200) NULL
-) ON PRIMARY
-GO
 
 CREATE TABLE conditions (
    CONDITION_ID int not NULL,
@@ -176,18 +170,19 @@ CREATE TABLE facility_contacts (
 ) ON PRIMARY
 GO
 
--- declare variable for files path --
 
-DECLARE @DATADIR varchar(128)
-SET @DATADIR ='C:\SQL2012\Projects\CinicalTrials\AACT201403Refresher_Pipe_delimited_txt\'
-
--- Write a dynamic SQL code to generate a bulk insert for each table --
+-- Write a dynamic SQL code to generate a bulk insert for each table. Run it. --
 
 select 'EXECUTE('''+char(13)+'bulk insert '+ table_name +' from ' +''''+'''''+@DATADIR +'''+ table_name +'.txt''''' 
 +' with (fieldterminator='+''''+'''|'''+''''+','+char(13)+'rowterminator='+''''+'''\n'''+''''+','+char(13)+'firstrow = 2)'''+')'
 from [INFORMATION_SCHEMA].[TABLES]
 
--- copy and paste the bulk inserts generated and run it --
+-- declare variable for files path --
+
+DECLARE @DATADIR varchar(128)
+SET @DATADIR ='C:\SQL2014\Projects\CinicalTrials\AACT201403Refresher_Pipe_delimited_txt\'
+
+-- copy and paste the bulk inserts generated AFTER the variable declaration and assignment. Select them all and run them. --
 
 EXECUTE('
 bulk insert arm_groups from '''+@DATADIR +'arm_groups.txt'' with (fieldterminator=''|'',
