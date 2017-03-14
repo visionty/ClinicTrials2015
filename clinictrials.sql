@@ -180,9 +180,9 @@ from [INFORMATION_SCHEMA].[TABLES]
 -- declare variable for files path --
 
 DECLARE @DATADIR varchar(128)
-SET @DATADIR ='C:\SQL2014\Projects\CinicalTrials\AACT201403Refresher_Pipe_delimited_txt\'
+SET @DATADIR ='C:\SQL2014\Projects\CinicalTrials\AACT201403Refresher_Pipe_delimited_txt\';
 
--- copy and paste the bulk inserts generated AFTER the variable declaration and assignment. Select them all and run them. --
+-- copy and paste the bulk inserts generated AFTER the variable declaration and assignment. Select them all and run them.
 
 EXECUTE('
 bulk insert arm_groups from '''+@DATADIR +'arm_groups.txt'' with (fieldterminator=''|'',
