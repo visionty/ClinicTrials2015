@@ -21,3 +21,4 @@ The downloads made available and required for this project are:
      - use 'INFORMATION_SCHEMA.TABLES'to get the list of table names (and hence file names) to use in the dynamic SQL
    - once dynamic SQL generates the bulk insert statements, copy and paste them all and run them all 
 4. Verify the table loads by comparing the number of rows inserted with the number of rows indicated in the data dictionary
+5. Set the primary key and foreign key constraints using the data dictionary Excel file as reference 
