@@ -3,7 +3,7 @@ CREATE DATABASE ClinicalTrials;
 USE ClinicalTrials; 
 GO
 
---create the tables (should be 43 tables, but for demo purposes, code shown will only limit to 10 tables)--
+--create the tables (should be 43 tables, but for demo purposes, code shown will only limit to 8 tables)--
 
 
 CREATE TABLE arm_groups (
