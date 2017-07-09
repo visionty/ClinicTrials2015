@@ -144,14 +144,6 @@ bulk insert clinical_study from '''+@DATADIR +'clinical_study.txt'' with (fieldt
 rowterminator=''\n'',
 firstrow = 2)')
 EXECUTE('
-bulk insert clinical_study_noclob from '''+@DATADIR +'clinical_study_noclob.txt'' with (fieldterminator=''|'',
-rowterminator=''\n'',
-firstrow = 2)')
-EXECUTE('
-bulk insert condition_browse from '''+@DATADIR +'condition_browse.txt'' with (fieldterminator=''|'',
-rowterminator=''\n'',
-firstrow = 2)')
-EXECUTE('
 bulk insert conditions from '''+@DATADIR +'conditions.txt'' with (fieldterminator=''|'',
 rowterminator=''\n'',
 firstrow = 2)')
