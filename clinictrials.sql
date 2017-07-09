@@ -174,7 +174,7 @@ firstrow = 2)')
 EXECUTE('
 bulk insert centralcontacts from '''+@DATADIR +'central_contacts.txt'' with (fieldterminator=''|'',
 rowterminator=''\n'',
-firstrow = 2)')'
+firstrow = 2)')
 
 -- set primary key constraints on tables --
 
