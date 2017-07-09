@@ -164,7 +164,7 @@ bulk insert authorities from '''+@DATADIR +'authorities.txt'' with (fieldtermina
 rowterminator=''\n'',
 firstrow = 2)')
 EXECUTE('
-bulk insert centralcontacts from '''+@DATADIR +'central_contacts.txt'' with (fieldterminator=''|'',
+bulk insert centralcontacts from '''+@DATADIR +'centralcontacts.txt'' with (fieldterminator=''|'',
 rowterminator=''\n'',
 firstrow = 2)')
 
