@@ -10,14 +10,14 @@ CREATE TABLE arm_groups (
    ARM_GROUP_TYPE varchar(20) NULL,
    DESCRIPTION varchar(2000) NULL,
    GROUP_ID varchar(3) NULL
-) ON PRIMARY
+) 
 GO
 
 CREATE TABLE authorities (
    AUTHORITY_ID int not NULL,
    NCT_ID nvarchar(51) NOT NULL,
    AUTHORITY nvarchar(300) NULL
-) ON PRIMARY
+) 
 GO
 
 CREATE TABLE centralcontacts (
@@ -28,7 +28,7 @@ CREATE TABLE centralcontacts (
    PHONE nvarchar(50) NULL,
    PHONE_EXT nvarchar(50) NULL,
    EMAIL nvarchar(200) NULL
-) ON PRIMARY
+) 
 GO
 
 CREATE TABLE clinical_study (
@@ -77,7 +77,7 @@ CREATE TABLE clinical_study (
    TARGET_DURATION nvarchar(50) NULL,
    STUDY_RANK nvarchar(50) NULL,
    LIMITATIONS_AND_CAVEATS nvarchar(max) NULL
-) ON PRIMARY
+)
 GO
 
 
@@ -85,7 +85,7 @@ CREATE TABLE conditions (
    CONDITION_ID int not NULL,
    NCT_ID nvarchar(50) NOT NULL,
    CONDITION nvarchar(200) NULL
-) ON PRIMARY
+) 
 GO
 
 CREATE TABLE designs (
@@ -94,7 +94,7 @@ CREATE TABLE designs (
    DESIGN_NAME nvarchar(50) NULL,
    DESIGN_VALUE nvarchar(100) NULL,
    MASKED_ROLE nvarchar(100) NULL
-) ON PRIMARY
+) 
 GO
 
 CREATE TABLE facilities (
@@ -106,7 +106,7 @@ CREATE TABLE facilities (
    STATE nvarchar(100) NULL,
    ZIP nvarchar(100) NULL,
    COUNTRY nvarchar(100) NULL
-) ON PRIMARY
+) 
 GO
 
 CREATE TABLE facility_contacts (
@@ -118,7 +118,7 @@ CREATE TABLE facility_contacts (
    PHONE nvarchar(100) NULL,
    PHONE_EXT nvarchar(50) NULL,
    EMAIL nvarchar(200) NULL
-) ON PRIMARY
+) 
 GO
 
 
